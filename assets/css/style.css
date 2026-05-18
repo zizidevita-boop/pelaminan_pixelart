@@ -1,0 +1,53 @@
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.lux-bg {
+  background: radial-gradient(circle at top, rgba(212,175,55,0.18), transparent 50%),
+              radial-gradient(circle at bottom, rgba(212,175,55,0.10), transparent 60%),
+              linear-gradient(to bottom, #040404, #0b0b0b, #020202);
+}
+
+.glass {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.border-gold {
+  border: 1px solid rgba(212,175,55,0.35);
+}
+
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #D4AF37, #7c5a11);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1.1s ease;
+}
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.shimmer-text {
+  background: linear-gradient(90deg, #D4AF37, #ffffff, #D4AF37);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  animation: shimmer 3s linear infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}

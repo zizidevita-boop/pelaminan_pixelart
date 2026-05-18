@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Login | Pelaminan PixelArt</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body
+    class="lux-bg text-white flex items-center justify-center min-h-screen px-6"
+  >
+    <div class="glass p-10 rounded-3xl max-w-md w-full border-gold shadow-xl">
+      <h1 class="text-3xl font-extrabold shimmer-text text-center">
+        Admin Login
+      </h1>
+      <p class="text-white/70 text-sm text-center mt-2">
+        Pelaminan PixelArt Dashboard
+      </p>
+
+      <form id="loginForm" class="mt-8 space-y-4">
+        <input
+          id="username"
+          type="text"
+          placeholder="Username"
+          class="w-full p-3 rounded-xl bg-white/5 border border-white/10 focus:border-yellow-400 focus:outline-none"
+        />
+
+        <input
+          id="password"
+          type="password"
+          placeholder="Password"
+          class="w-full p-3 rounded-xl bg-white/5 border border-white/10 focus:border-yellow-400 focus:outline-none"
+        />
+
+        <button
+          type="submit"
+          class="w-full py-3 rounded-full bg-yellow-400 text-black font-bold hover:bg-yellow-500 transition"
+        >
+          Login Admin
+        </button>
+      </form>
+
+      <p class="text-white/50 text-xs mt-6 text-center">
+        Default: admin / 12345
+      </p>
+    </div>
+
+    <script src="assets/js/admin-auth.js"></script>
+    <script>
+      const form = document.getElementById("loginForm");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        if (loginAdmin(username, password)) {
+          alert("Login berhasil!");
+          window.location.href = "admin-dashboard.html";
+        } else {
+          alert("Login gagal! Username atau password salah.");
+        }
+      });
+    </script>
+  </body>
+</html>

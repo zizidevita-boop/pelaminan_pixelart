@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontak | Pelaminan PixelArt</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body class="lux-bg text-white">
+    <header
+      class="fixed top-0 left-0 w-full z-50 bg-black/50 backdrop-blur-xl border-b border-white/10"
+    >
+      <div
+        class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between"
+      >
+        <a href="index.html" class="text-2xl font-extrabold text-yellow-400">
+          Pelaminan <span class="text-white">PixelArt</span>
+        </a>
+
+        <nav class="hidden md:flex gap-8 text-sm font-bold">
+          <a href="index.html" class="hover:text-yellow-400 transition">Home</a>
+          <a href="paket.html" class="hover:text-yellow-400 transition"
+            >Paket</a
+          >
+          <a href="galeri.html" class="hover:text-yellow-400 transition"
+            >Galeri</a
+          >
+          <a href="kontak.html" class="text-yellow-400">Kontak</a>
+        </nav>
+
+        <button id="menuBtn" class="md:hidden text-2xl">☰</button>
+      </div>
+
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden bg-black/70 border-t border-white/10"
+      >
+        <div class="flex flex-col p-6 gap-4 text-sm font-bold">
+          <a href="index.html" class="hover:text-yellow-400 transition">Home</a>
+          <a href="paket.html" class="hover:text-yellow-400 transition"
+            >Paket</a
+          >
+          <a href="galeri.html" class="hover:text-yellow-400 transition"
+            >Galeri</a
+          >
+          <a href="kontak.html" class="text-yellow-400">Kontak</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="pt-36 pb-20 px-6">
+      <div class="max-w-7xl mx-auto reveal">
+        <div class="text-center mb-12">
+          <h1 class="text-4xl font-extrabold text-yellow-400">
+            Kontak & Booking
+          </h1>
+          <p class="text-white/70 mt-3">
+            Hubungi kami untuk konsultasi gratis.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-10">
+          <div class="glass p-8 rounded-3xl border border-white/10">
+            <h2 class="text-2xl font-bold text-yellow-400">Informasi Kontak</h2>
+            <p class="text-white/70 text-sm mt-3">
+              Pelaminan PixelArt siap melayani dekorasi wedding mewah untuk
+              seluruh wilayah Indonesia.
+            </p>
+
+            <div class="mt-6 space-y-4 text-sm text-white/80">
+              <p>📍 Lokasi: Indonesia</p>
+              <p>📞 WhatsApp: +62 800-0000-0000</p>
+              <p>📧 Email: pelaminanpixelart@gmail.com</p>
+              <p>⏰ Jam Operasional: 08.00 - 22.00</p>
+            </div>
+
+            <a
+              href="https://wa.me/6280000000000"
+              target="_blank"
+              class="inline-block mt-8 px-7 py-3 rounded-full bg-green-500 text-black font-bold hover:bg-green-600 transition shadow-xl"
+            >
+              Chat WhatsApp
+            </a>
+          </div>
+
+          <div class="glass p-8 rounded-3xl border border-white/10">
+            <h2 class="text-2xl font-bold text-yellow-400">Form Booking</h2>
+            <p class="text-white/70 text-sm mt-2">
+              Data booking otomatis masuk ke dashboard admin.
+            </p>
+
+            <form id="bookingForm" class="mt-6 space-y-4">
+              <input
+                required
+                id="nama"
+                type="text"
+                placeholder="Nama Lengkap"
+                class="w-full p-3 rounded-xl bg-white/5 border border-white/10 focus:outline-none focus:border-yellow-400"
+              />
+
+              <input
+                required
+                id="hp"
+                type="text"
+                placeholder="Nomor WhatsApp"
+                class="w-full p-3 rounded-xl bg-white/5 border border-white/10 focus:outline-none focus:border-yellow-400"
+              />
+
+              <input
+                required
+                id="tanggal"
+                type="date"
+                class="w-full p-3 rounded-xl bg-white/5 border border-white/10 focus:outline-none focus:border-yellow-400"
+              />
+
+              <input
+                required
+                id="lokasi"
+                type="text"
+                placeholder="Lokasi Acara"
+                class="w-full p-3 rounded-xl bg-white/5 border border-white/10 focus:outline-none focus:border-yellow-400"
+              />
+
+              <select
+                required
+                id="paket"
+                class="w-full p-3 rounded-xl bg-white/5 border border-white/10 focus:outline-none focus:border-yellow-400"
+              >
+                <option value="">Pilih Paket</option>
+              </select>
+
+              <textarea
+                id="catatan"
+                placeholder="Catatan Tambahan (opsional)"
+                rows="3"
+                class="w-full p-3 rounded-xl bg-white/5 border border-white/10 focus:outline-none focus:border-yellow-400"
+              ></textarea>
+
+              <button
+                type="submit"
+                class="w-full py-3 rounded-full bg-yellow-400 text-black font-bold hover:bg-yellow-500 transition shadow-xl"
+              >
+                Kirim Booking
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="py-10 border-t border-white/10 bg-black/40">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <h3 class="text-xl font-extrabold text-yellow-400">
+          Pelaminan PixelArt
+        </h3>
+        <p class="text-white/60 text-sm mt-2">
+          Luxury Wedding Decoration | Modern | Adat | Royal
+        </p>
+        <p class="text-white/40 text-xs mt-6">
+          © 2026 Pelaminan PixelArt. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="assets/js/database.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/booking.js"></script>
+
+    <script>
+      const paketData = getData("paket");
+      const paketSelect = document.getElementById("paket");
+
+      paketData.forEach((p) => {
+        const opt = document.createElement("option");
+        opt.value = p.nama;
+        opt.innerText =
+          p.nama + " (Rp " + Number(p.harga).toLocaleString("id-ID") + ")";
+        paketSelect.appendChild(opt);
+      });
+    </script>
+  </body>
+</html>
